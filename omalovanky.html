@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="cs-cz">
+<head>
+    <meta charset="utf-8">
+    <meta name="autor" content="EraNumin"/>
+    <link rel="shortcut icon" href="obrazky/logo-ikonka.ico"/>
+    <title>Myslivecký kroužek Bystřec</title>
+    <link rel="stylesheet" href="styleKresleni.css" type="text/css"/>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <header>
+        <div id="logo">
+         <h1>Myslivecký kroužek Bystřec</h1>
+         <nav>
+             <ul>
+               <li class="aktivni"><a class="aktivni" href="index.html">Úvod</a></li>
+               <li><a href="aktuality.html">Aktuality</a></li>
+               <li><a href="co-se-deje-v-lese.html">Co se děje v lese</a></li>
+               <li><a href="fotogalerie.html">Fotogalerie</a></li>
+               <li><a href="o-nas.html">O nás</a></li>
+               <li><a href="kontakt.html">Kontakt</a></li>
+             </ul>
+          </nav>
+     </div>
+     </header>
+    <div class="kresleni">
+        <canvas id="canvas"></canvas>
+        
+        
+        <div class="tools">
+            
+            <div  onClick="change_color(this)" class="color-field" style="background: red;"></div>
+            <div  onClick="change_color(this)" class="color-field" style="background: rgb(87, 43, 6);"></div>
+            <div  onClick="change_color(this)" class="color-field" style="background: orange;"></div>
+            <div  onClick="change_color(this)" class="color-field" style="background: yellow;"></div>
+            <div  onClick="change_color(this)" class="color-field" style="background: greenyellow;"></div>
+            <div  onClick="change_color(this)" class="color-field" style="background: green;"></div>
+            <div  onClick="change_color(this)" class="color-field" style="background: blue;"></div>
+            <div  onClick="change_color(this)" class="color-field" style="background: rgb(113, 171, 247);"></div>
+            <div  onClick="change_color(this)" class="color-field" style="background: darkmagenta;"></div>
+            <div  onClick="change_color(this)" class="color-field" style="background: black;"></div>
+            
+            
+        </div>
+        <div class="tlacitka">
+            <button onClick="clear_canvas()" type="button" class="buttons">Vymazat</button>
+        
+           <input onInput="draw_width = this.value" type="range" min="1" max="100" class="pen_range">
+        </div>
+        <div class="obrazky">
+            <img id="kralik" onclick="kralik()" class="obrazek" src="images/kralik.png" height="120px">
+            <img id="liska" onclick="liska()" class="obrazek" src="images/liska.png" height="120px">
+            <img id="sova" onclick="sova()" class="obrazek" src="images/sova.png" height="120px">
+            <img id="zaba" onclick="zaba()" class="obrazek" src="images/zaba.png" height="120px">
+         </div>
+        </div>
+    </div>
+    
+</body>
+<footer>
+    <p class="centrPaticka">Vytvořila &copy EraNumin @DateTime.Now.Year pro <strong>Myslivecký kroužek Bystřec</strong></p>
+</footer>
+<script src="kresba.js"></script>
+</html>
+
